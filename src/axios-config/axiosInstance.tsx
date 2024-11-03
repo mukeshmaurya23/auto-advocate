@@ -23,14 +23,14 @@ const networkRequest = (networkConfig?: NetworkConfig) => {
 
     const PORT = {
         //Production
-        PROD_URL: "",
+        PROD_URL: "https://api.negotigator.com/api/",
 
         //Staging
-        STAGING_URL: "http://127.0.0.1:8000/api/",
+        STAGING_URL: "https://api.negotigator.com/api/",
     };
 
     const axiosInstance = axios.create({
-        baseURL: PORT.STAGING_URL,
+        baseURL: PORT.PROD_URL,
         timeout: timeOutTime,
         headers,
         signal: signal,
